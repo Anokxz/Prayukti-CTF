@@ -1,0 +1,5 @@
+The Flag Format is flag{SOME_WORDS}
+
+example : flag{WE1COm3_2_pR4YUkTi_CTF}
+
+submit the flag and earn you points
