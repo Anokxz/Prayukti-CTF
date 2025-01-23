@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     //---[Checking Correct Argument Count]---//
     if (argc != 2) {
         printf("Usage: %s <username>\n", argv[0]);
-        exit(0);
+        exit(1);
     }
 
     ///---[Verify Secert user]---///

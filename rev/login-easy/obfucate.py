@@ -1,4 +1,5 @@
-FLAG = "flag{d1D_XOr_$EEM$_Fun_t0_Y0U}"
+#FLAG = "flag{d1D_XOr_$EEM$_Fun_t0_Y0U}"
+#FlAG
 KEY = 69
 print(f'{FLAG}, key = {KEY}')
 
