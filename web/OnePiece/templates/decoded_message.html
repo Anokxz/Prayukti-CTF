@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoded Message</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="decoded-box">
+            <h2>Road Poneglyph Decoded!</h2>
+            <div class="robin-image">
+                <img src="{{ url_for('static', filename='images/robin-reading.jpg') }}" alt="Nico Robin reading Poneglyph">
+            </div>
+            <div class="decoded-message">
+                <h3>Ancient Message:</h3>
+                <p class="message">"flag{7H3_one_piECe_i$_ReaL}"</p>
+            </div>
+            <a href="{{ url_for('dashboard') }}" class="back-button">Return to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

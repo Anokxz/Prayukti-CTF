@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - One Piece</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-box">
+            <div class="header">
+                <h2>Welcome to the Grand Line, {{ character_name }}!</h2>
+                <a href="{{ url_for('logout') }}" class="nav-button logout">Logout</a>
+            </div>
+            
+            <div class="poneglyph-section">
+                <div class="poneglyph-stone">
+                    <p>This Road Poneglyph contains ancient wisdom...</p>
+                    <p>Only those who understand the ancient language can decode it.</p>
+                    <div class="robin-image">
+                        <img src="{{ url_for('static', filename='images/vault.jpg') }}" alt"Poneglyph">
+                    </div>
+                </div>
+                <form method="POST" class="decode-form">
+                    <div class="form-group">
+                        <input type="text" name="password" placeholder="Enter the ancient password" required>
+                    </div>
+                    <button type="submit">Decode Poneglyph</button>
+                </form>
+                <form method="POST" class="decode-form">
+                    <input type="text" name="username" value="luffy" hidden required>
+                    <button type="submit">Forgot Password</button>
+                </form>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

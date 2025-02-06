@@ -1,45 +1,46 @@
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
-//---[Secret Flag]---//
-#define OBFUSCATED_FLAG {0x27, 0x0E, 0x17, 0x04, 0x3B, 0x18, 0x17, 0x3B, 0x11, 0x0F, 0x2F, 0x00}
-#define FLAG_KEY 0x55
-
-//---[Obfuscated Password Check Function]---//
-int check_pass(char* passwd) {
-    unsigned char obfuscated_pass[] = {0x24, 0x13, 0x24, 0x1F, 0x35, 0x2A, 0x3B, 0x10, 0x27, 0x3A, 0x3A, 0x00};
-    for (int i = 0; i < strlen((char*)obfuscated_pass); i++) {
-        obfuscated_pass[i] ^= 0x5A; // XOR with 0x5A to deobfuscate
+int check_pass(char* passwd){
+    unsigned char obfuscated_pass[] = {
+        0x23, 0x29, 0x24, 0x22, 0x3e, 0x21, 0x74, 0x01, 0x1a, 0x1d, 
+        0x0a, 0x37, 0x1a, 0x61, 0x00, 0x00, 0x08, 0x61, 0x1a, 0x03, 
+        0x30, 0x2b, 0x1a, 0x31, 0x75, 0x1a, 0x1c, 0x75, 0x10, 0x38,
+    };
+    for (int i = 0; i < 30; i++) {
+        obfuscated_pass[i] ^= 0x45; 
     }
+    
     return strcmp(passwd, (char*)obfuscated_pass) == 0;
 }
 
-void reveal_flag(char* buffer) {
-    unsigned char flag[] = OBFUSCATED_FLAG;
-    for (int i = 0; i < strlen((char*)flag); i++) {
-        buffer[i] = flag[i] ^ FLAG_KEY; // XOR with FLAG_KEY to reveal flag
-    }
-    buffer[strlen((char*)flag)] = '\0'; // Null-terminate the flag string
-}
+int verify_username(char* username){
+    char secert_user[9] = "@dM1nu53R";
+    secert_user[5] = '\0';
 
+    return strcmp(secert_user, username) ? 0 : 1;
+}
 int main(int argc, char *argv[]) {
+    //---[Checking Correct Argument Count]---//
     if (argc != 2) {
         printf("Usage: %s <username>\n", argv[0]);
-        exit(0);
+        exit(1);
     }
 
-    char* username = argv[1];
-    char* password = getpass("Password: ");
+    ///---[Verify Secert user]---///
+    if (!verify_username(argv[1])) {
+        printf("You are not the correct user!!. Be aware I'm watching you\n");
+        exit(1);
+    }
+    //---[Get the Password Secertly]---//
+    char* password = getpass("Is It really you ??. give me our secert pharse: ");
 
     if (check_pass(password)) {
-        char flag[50];
-        reveal_flag(flag);
-        printf("Welcome %s! Here is your flag: %s\n", username, flag);
+        printf("Wow, It is really you.\n");
     } else {
-        printf("Invalid password! Access denied.\n");
+        printf("Don't Try to Fool me by impersontating. -_-\n");
     }
-
     return 0;
 }

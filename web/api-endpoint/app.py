@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import base64
 
 token = "YOU_@re_G3TtInG_c1o$ER"
-flag = "flag{dummy_flag}"
+flag = "flag{yOU_Ma$t3r3d_enum3R47I0n}"
 
 app = Flask(__name__)
 
@@ -33,4 +33,4 @@ def reveal_flag():
     
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=True)
+    app.run(host="127.0.0.1", port=8080)

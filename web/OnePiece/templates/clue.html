@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue to find the One Piece</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="decoded-box">
+            <h2>Clue from Dr.Vegapunk!</h2>
+            <div class="vegapunk-image">
+                <img src="{{ url_for('static', filename='images/vegapunk.jpg') }}" alt="vegapunk">
+            </div>
+            <div class="decoded-message">
+                <h3>"Only robin can read the ancient language to deocde the poneglyph."</h3>
+                <!-- <p class="message">"Only robin can read the ancient language to deocde the poneglyph."</p> -->
+            </div>
+            <a href="{{ url_for('dashboard') }}" class="back-button">Return to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

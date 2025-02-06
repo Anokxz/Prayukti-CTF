@@ -1,5 +1,11 @@
-The Flag Format is flag{SOME_WORDS}
+Welcome to Prayukti CTF!
 
-example : flag{WE1COm3_2_pR4YUkTi_CTF}
+Greetings, brave competitor! 🎉 We're excited to have you join this adventure.
 
-submit the flag and earn you points
+To make your way through this challenge, you'll need to uncover hidden flags, which will be in the following format:
+
+flag{<your_flag_here>}
+
+For example, a sample flag would look like this: flag{WE1COm3_2_pR4YUkTi_CTF}
+
+Once you've uncovered a flag, be sure to submit it to earn valuable points. Good luck, and happy hacking! 🕵️‍♂️
