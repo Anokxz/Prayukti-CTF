@@ -87,7 +87,7 @@ def dashboard():
         
         username = request.form.get('username')
         if username:
-            flash(f"Here is ur secert path to access : /unlock/{username.encode("utf-8").hex()}")
+            flash(f"Here is ur secert path to access : /unlock/{username.encode('utf-8').hex()}")
     return render_template('dashboard.html', character_name=current_user.character_name)
 
 
