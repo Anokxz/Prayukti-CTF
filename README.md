@@ -1,36 +1,34 @@
 # Prayukti CTF
 
-Challenges | Total Need | Completed | On Going | Not Completed | 
----        | ---        | ---       | ---      |---            |
-Welcome    | 2          | 2         | NIL      | NIL           |     
-Crypto     | 4          | 2         | NIL      | NIL           |
-Rev        | 4          | 1         | NIL      | NIL           |     
-OSINT      | 2          | 0         | NIL      | NIL           |
-WEB        | 4          | 1         | NIL      | NIL           |     
-Foreniscs  | 4          | 0         | NIL      | NIL           |
-Total      | 20         | 0         | NIL      | NILL          |
+## Welcome to the Prayukti CTF challenges! 
 
+This repository contains a collection of challenges designed to test and enhance your cybersecurity skills on Prayukti CTF 2025. 
 
-## Challenges 
-### 1. Welcome
-- [ ] Discord Flag
-- [ ] Greeting
+The challenges span multiple categories, providing a diverse and engaging experience for participants.
 
-### 2. Crypto
-- [ ] Grille
-- [ ] Dancing Man Cipher
-- [ ] Same Same But Different
+| S.No  |Challenges | Total Challenges |
+| ---   | ---       | :---:  |
+| 1     |Welcome    | 1     |     
+| 2     |Crypto     | 2     |
+| 3     |Rev        | 2     |     
+| 4     |WEB        | 2     |     
+| 5     |Foreniscs  | 2     |
+|   |**Grand Total**| **9** |
 
-### 3. Rev
-- [ ]
+### Categories
 
-### 4. OSINT
-- [ ]
+- ***Welcome***: A simple challenge to get started with the CTF.
 
-### 5. WEB
+- ***Crypto***: Challenges involving cryptographic techniques and ciphers.
 
-### 6. Foreniscs 
+- ***Rev*** (Reverse Engineering): Challenges requiring analysis and decompilation of binaries.
 
-### 7. Networks
+- ***Web***: Web security challenges testing vulnerabilities in web applications.
 
-### 8. Hardware
+- ***Forensics***: Challenges focused on digital forensics and data recovery.
+
+## License
+
+This repository is open-source and free to use for educational purposes only.
+
+Happy Hacking! 🚀
